@@ -17,8 +17,8 @@ namespace CustomExceptions.Domain.Validation
             else if (string.IsNullOrWhiteSpace(employeeRequest.Name))
             {
 
-                // throw new EmployeeArgumentExceptions($"{nameof(EmployeeRequest.Name)} is null/empty/Whitespace") 
-                throw new IndexOutOfRangeException();
+                throw new EmployeeArgumentExceptions($"{nameof(EmployeeRequest.Name)} is null/empty/Whitespace"); 
+                //throw new IndexOutOfRangeException();
 
             }
             else if (string.IsNullOrWhiteSpace(employeeRequest.Mobile))
