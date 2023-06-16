@@ -6,6 +6,7 @@ namespace CustomExceptions.Domain.Validation
 {
     public static class EmployeeRequestValidator
     {
+        
         public static void Validate(EmployeeRequest employeeRequest) {
 
             if (employeeRequest == null)

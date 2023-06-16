@@ -9,6 +9,12 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+//builder.Services.AddControllers(options =>
+//{
+//    options.Filters.Add(new CustomIExceptionFilter());
+
+//});
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

@@ -1,5 +1,6 @@
 ﻿using CustomExceptions.Domain;
 using CustomExceptions.Entities;
+using CustomExceptions.Filters;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -7,6 +8,7 @@ namespace CustomExceptions.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [CustomExceptionFilter]
     public class EmployeeController : ControllerBase
     {
 
@@ -19,6 +21,7 @@ namespace CustomExceptions.Controllers
 
 
         [HttpPost("SaveEmployee")]
+        
         public void SaveEmployeeDetails([FromBody] EmployeeRequest employeeRequest) {
 
             employeeManager.SaveEmployeeDetails(employeeRequest);
